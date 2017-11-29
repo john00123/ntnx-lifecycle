@@ -3,8 +3,8 @@ var header = {
   time:[ 2, 2, 2, 2]
 };
 
-header.value.map(x =>`<li>${x}</li>`);
+let map1 = header.value.map(x =>`<li>${x}</li>`);
 
 $(document).ready(function() {
-   $('body').append(table(value));
+   $('body').append(map1);
 });
