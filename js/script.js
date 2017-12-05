@@ -1,10 +1,11 @@
-var header = {
-  value:['One', 'Two', 'Three', 16],
-  time:[ 2, 2, 2, 2]
-};
 
-let map1 = header.value.map(x =>`<li>${x}</li>`);
+let map1 = cards.map(card =>
+  `<div class='card'>
+    <h5>${card.title}</h5>
+    <p>${card.state}</p>
+  </div>`
+);
 
 $(document).ready(function() {
-   $('body').append(map1);
+   $(`.section[data-type='available']`).append(map1);
 });

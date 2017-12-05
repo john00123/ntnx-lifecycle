@@ -1,3 +1,9 @@
+html, body, article {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 html {
   font: 400 14px/10px "nutanix_soft", san-serif;
   text-rendering: optimizeSpeed;
@@ -9,10 +15,99 @@ html {
 
 body {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: column;
-  height: 100vh;
+  background-color: #F2F4F6;
+  margin: 0;
+}
+
+header {
+  background-color: #22272E;
+  height: 60px;
   width: 100%;
   box-sizing: border-box;
+}
+
+aside {
+  background-color: white;
+  height: 100%;
+  width: 280px;
+  box-sizing: border-box;
+}
+
+article {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  width: calc(100% - 280px);
+  padding: 20px;
+}
+
+.section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card {
+  border: 1px solid #D5DAE0;
+  border-radius: 4px;
+  padding: 11px 15px;
+  color: #22272E;
+  font: 400 14px/10px "nutanix_soft", san-serif;
+  text-decoration: none;
+  background-color: #FFFFFF;
+  margin: 0;
+  outline: none;
+  transition: box-shadow 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: none;
+  width: 22%;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  color: #22A5F7;
+  cursor: pointer;
+}
+
+.card:active {
+  color: #91d2fb;
+}
+
+.card span {
+  height: 10px;
+  display: block;
+  font-weight: 500;
+  line-height: 9pt;
+}
+
+.card:hover {
+  box-shadow: 0 9px 9px 0 rgba(0, 0, 0, 0.02), 0 3px 3px 0 rgba(0, 0, 0, 0.02), 0 1px 1px 0 rgba(0, 0, 0, 0.02);
+}
+
+.card span {
+  height: 10px;
+  display: block;
+  font-weight: 500;
+  line-height: 9pt;
+}
+
+.card:hover {
+  color: #22272E;
+}
+
+.card:not(:last-child) {
+  margin-right: 20px;
 }
