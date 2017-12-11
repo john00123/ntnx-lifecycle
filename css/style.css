@@ -453,9 +453,11 @@ code {
   box-sizing: border-box;
   background-color: #F55656;
   padding: 5px 6px;
-  border-radius: 3px;
+  border-radius: 3pc;
   color: white;
   font-weight: 500;
+  min-width: 20px;
+  text-align: center;
 }
 
 code:hover {

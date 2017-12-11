@@ -3,7 +3,9 @@ let deckAvailable = cards.filter(card => card.state === 'available')
   `<div class='card'>
     <div class='card-header'>
      <h5><input type='checkbox' class='select-tile'/> ${card.title} </h5>
-     <code> ${card.entities} updates </code>
+     <code> ${card.entities === 1 ?
+        card.entities + ` ` :
+        card.entities + ` `} </code>
     </div>
 
     <div class='card-body'>
@@ -57,7 +59,7 @@ function checkCheck(){
   let checkbox =$(this).find(".card-header h5 input");
   let checked = checkbox.prop('checked') ? false : true;
   checkbox.prop('checked', checked);
-  $('.selected-text').html($('input:checked').length !== 0 ? `/ ` +  $('input:checked').length + ` modules selected ${`<a class='clear'>clear</a>`}`: '');
+  $('.selected-text').html($('input:checked').length !== 0 ? `/ ` +  $('input:checked').length + ` modules selected  ·  ${`<a class='clear'>clear</a>`}`: '');
   $('.card-body a').click(event => event.stopPropagation());
   $('.clear').click(clearCheck);
  };
