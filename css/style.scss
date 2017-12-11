@@ -21,45 +21,241 @@ body{
 
 header{
   background-color: $background-color-1;
-  @include size(60px, 100%);
+  @include size(64px, 100%);
 }
 
 aside{
   background-color: white;
-  @include size(100%, 280px);
+  @include size(100%, 240px);
+  display: flex;
+  flex-shrink: 0;
+
 }
 
 article{
+  margin: 0;
   @include flex(flex-start, flex-start, row);
 }
 
 
-// container
+// buttons
+.primary { @include primary }
+
+.primary-alt{
+  @include primary-alt;
+  display: inline-flex;
+  position: relative;
+  border-radius: 4px 0px 0px 4px;
+  font-weight: 500;
+}
+
+.secondary{ @include secondary }
+
+.secondary-alt{ @include secondary-alt
+  font-weight: 500; }
+
+.button-group{
+  @include flex(center, flex-start,row);
+  width: 100%;
+  display: block;
+  & > *{ margin-right: 10px;}
+  padding-bottom: 10px;
+}
+
+.multi-primary{
+  @include flex(center, flex-start, row);
+  display: inline-flex;
+  height: 32px;
+}
+
+.arrow{
+  @include primary-alt;
+  border-radius: 0px 4px 4px 0px;
+  display: inline-block;
+  position: relative;
+
+  @include size(32px, 8px);
+  border-left: 1px solid $blue-2;
+  padding-right: 16px;
+  top: 0;
+  right: 0;
+
+  &::before, &::after {
+    @include size(4.5px, 1.5px);
+    @include transition (transform);
+    content: '';
+    transform-origin: bottom;
+    display: block;
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    border-radius: 3px;
+    z-index: 3;
+    background-color: $white;
+  }
+
+  &::before{ transform: translateX(-0.25px) rotate( 45deg); }
+  &::after { transform: translateX( 0.25px) rotate(-45deg); }
+}
+
+
+// main
 
 .container{
   @include flex(flex-start, space-between, column);
-  width: calc(100% - 280px);
   padding: 20px;
+}
 
+.container > * {
+  margin-bottom: 20px;
 }
 
 .section{
   @include flex(flex-start, flex-start, row);
   flex-wrap: wrap;
+  width: calc(100% + 20px);
+  margin-bottom: 20px;
+}
+
+.clear{
+  font-size: 12px;
+  line-height: 8px;
+}
+
+[data-type='section-title']{
+  font: $h4;
+  color: $font-color-2;
+  &:first-of-type{
+    margin-top: 10px;
+  }
+}
+
+[data-size='fw']{
   width: 100%;
 }
 
-.card{
-  @include secondary-alt;
-  // flex-grow: 1;
-  width: 22%;
-  margin-bottom: 20px;
+label {
+  font: $h4;
+  color:$font-color-2;
 
+}
+input[type='text']{
+  @include size(32px, 100%);
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  padding: 8px 10px;
+  @include transition(border-color);
+  border: 1px solid transparent;
+  font: $p;
+  &:focus{
+    border: 1px solid $blue-1;
+  }
+}
+
+input[type='checkbox']{
+  display: inline-flex;
+  margin-right: 10px;
+  pointer-events: none;
+}
+
+.card{
+  width: calc(25% - 20px);
+  margin-right: 20px;
+  min-width: 280px;
+}
+
+.card-body{
+  @include secondary-alt;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  border-radius: 0 0 4px 4px;
   &:hover{
     color: $font-color-1;
   }
 
   &:not(:last-child){
     margin-right: 20px;
+  }
+
+  p:first-of-type{
+    margin-top: 0;
+  }
+}
+
+a{@include link;}
+
+.card-header{
+  @include size(40px,100%);
+  @include flex(center, space-between, row);
+  border-radius: 4px 4px 0 0;
+  padding: 15px 20px;
+  border-bottom: 1px solid $border-color-3;
+  background-color: white;
+}
+
+h5{
+  @include flex(center, flex-start, row);
+  font: $p-alt;
+  height: 9px;
+  line-height: 9pt;
+  font-weight: 500;
+}
+
+code{
+  font:$p-alt;
+  font-size: 12px;
+  @include size(20px, auto);
+  background-color: $red-1;
+  padding: 5px 6px;
+  border-radius: 3px;
+  color:white;
+  font-weight: 500;
+  &:hover{
+    background-color: $dark-red-3;
+    cursor: pointer;
+  }
+}
+
+h4{
+  font:$h4;
+  margin-top: -4px;
+  color:$font-color-2;
+}
+
+//media queries
+
+@media (min-width: 2200px) {
+  .card{
+    width: calc(20% - 20px);
+  }
+}
+
+@media (max-width: 1510px) {
+  .card{
+    width: calc(33% - 17px);
+  }
+}
+
+@media (max-width: 1210px) {
+  .card{
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 902px) {
+  .card{
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  aside{
+    display: none;
+  }
+  .container{
+    width: 100%;
   }
 }
