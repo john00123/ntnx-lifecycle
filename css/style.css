@@ -25,9 +25,21 @@ body {
 
 header {
   background-color: #22272E;
-  height: 64px;
+  height: 60px;
   width: 100%;
   box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+header svg {
+  height: 16px;
+  width: 22px;
+  box-sizing: border-box;
+  fill: #4D5969;
 }
 
 aside {
@@ -47,6 +59,121 @@ article {
   justify-content: flex-start;
   flex-direction: row;
   flex-grow: 1;
+}
+
+.searchnav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.searchnav > * {
+  margin-right: 20px;
+  position: relative;
+}
+
+.searchnav::before {
+  content: "";
+  height: 12px;
+  width: 12px;
+  box-sizing: border-box;
+  position: absolute;
+  background: url("../img/search-icon.svg");
+  top: 24px;
+  left: 62px;
+  z-index: 10;
+}
+
+.search-bar {
+  height: 32px;
+  width: 250px;
+  box-sizing: border-box;
+  position: relative;
+  outline: none;
+  background-color: #37414B;
+  padding: 8px 8px 8px 30px;
+  border: none;
+  border-radius: 4px;
+  font: 400 14px/22px "nutanix_soft", san-serif;
+  font-weight: 500;
+  color: white;
+}
+
+.search-bar::placeholder {
+  color: white;
+}
+
+.hamburger-icon {
+  height: 14px;
+  width: 14px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.hamburger-icon .icon-line {
+  height: 2px;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  background-color: #7C8D9F;
+  border-radius: 1px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+
+.status .icon {
+  height: 14px;
+  width: 14px;
+  box-sizing: border-box;
+  margin-right: 50px;
+  position: relative;
+}
+
+.status .icon::after {
+  content: '3';
+  position: absolute;
+  padding: 5px 6px;
+  background-color: red;
+  left: 25px;
+  top: -2px;
+  font-size: 12px;
+  line-height: 7pt;
+  display: block;
+  font-weight: 600;
+  color: white;
+  border-radius: 4pc;
+}
+
+.status .bell {
+  background: url("../img/bell.svg");
+}
+
+.status .bell::after {
+  background-color: #F55656;
+}
+
+.status .task {
+  background: url("../img/task.svg");
+}
+
+.status .task::after {
+  background-color: #22A5F7;
+}
+
+.status h6 {
+  margin-left: 10px;
+  font: 400 14px/22px "nutanix_soft", san-serif;
+  color: #9AA5B5;
+  font-weight: 500;
 }
 
 .primary {
@@ -501,6 +628,12 @@ h4 {
 @media (max-width: 560px) {
   aside {
     display: none;
+  }
+  .status h6 {
+    display: none;
+  }
+  .icon:last-of-type {
+    margin-right: 20px;
   }
   .container {
     width: 100%;

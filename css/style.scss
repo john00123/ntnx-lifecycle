@@ -21,7 +21,13 @@ body{
 
 header{
   background-color: $background-color-1;
-  @include size(64px, 100%);
+  @include size(60px, 100%);
+  padding: 20px;
+  @include flex(center, space-between, row);
+  svg{
+    @include size(16px, 22px);
+    fill:$background-color-4;
+  }
 }
 
 aside{
@@ -38,6 +44,89 @@ article{
   flex-grow: 1;
 }
 
+.searchnav{
+  @include flex(center, center, row);
+  > * {
+    margin-right: 20px;
+    position: relative;
+  }
+  &::before{
+      content:"";
+      @include size(12px, 12px);
+      position: absolute;
+      background: url('../img/search-icon.svg');
+      top:24px;
+      left: 62px;
+      z-index: 10;
+    }
+}
+
+.search-bar{
+  @include size( 32px, 250px);
+  position: relative;
+  outline: none;
+  background-color: $background-color-2;
+  padding:8px 8px 8px 30px;
+  border: none;
+  border-radius: 4px;
+  font:$p;
+  font-weight: 500;
+  color:white;
+  &::placeholder{color:white;}
+}
+
+.hamburger-icon{
+  @include size(14px, 14px);
+  @include flex(center, space-between, column);
+  .icon-line{
+    @include size(2px, 100%);
+    display: block;
+    background-color: $font-color-3;
+    border-radius: 1px;
+  }
+}
+
+.status{
+  @include flex(center, flex-end, row);
+
+  .icon{
+    @include size(14px, 14px);
+    margin-right: 50px;
+    position: relative;
+
+    &::after{
+      content: '3';
+      position: absolute;
+      padding: 5px 6px;
+      background-color:red;
+      left:25px;
+      top:-2px;
+      font-size: 12px;
+      line-height: 7pt;
+      display: block;
+      font-weight: 600;
+      color:white;
+      border-radius: 4pc;
+    }
+  }
+
+  .bell{
+    background: url('../img/bell.svg');
+    &::after{background-color: $red-1;}
+  }
+  .task{
+    background: url('../img/task.svg');
+    &::after{background-color: $blue-1;}
+  }
+
+
+  h6{
+    margin-left: 10px;
+    font:$p;
+    color: $font-color-4;
+    font-weight: 500;
+  }
+}
 
 // buttons
 .primary { @include primary }
@@ -258,6 +347,15 @@ h4{
   aside{
     display: none;
   }
+
+  .status h6{
+    display: none;
+  }
+
+  .icon:last-of-type{
+    margin-right: 20px;
+  }
+
   .container{
     width: 100%;
   }
