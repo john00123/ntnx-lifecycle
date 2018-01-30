@@ -50,6 +50,51 @@ aside {
   display: flex;
   flex-shrink: 0;
   flex-flow: column;
+  padding: 0 20px;
+}
+
+aside h1 {
+  margin-top: 40px;
+  line-height: 0;
+  text-align: left;
+}
+
+aside span {
+  font: 400 14px/10px "nutanix_soft", san-serif;
+  color: #9AA5B5;
+  margin-top: 0;
+}
+
+aside p {
+  line-height: 10px;
+  font-weight: 500;
+  margin: 0;
+  color: #22272E;
+  margin-top: 10px;
+  position: relative;
+}
+
+.active {
+  margin: 10px -20px 0 -20px;
+  padding: 12px 20px;
+  background-color: #f4fbff;
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  box-sizing: border-box;
+  background-color: #22A5F7;
+  top: 0;
+  right: 0;
+}
+
+.small-sep {
+  width: 30px;
+  border-bottom: 1px solid #D5DAE0;
+  margin: 20px 0 0px 0;
 }
 
 article {
@@ -59,6 +104,10 @@ article {
   justify-content: flex-start;
   flex-direction: row;
   flex-grow: 1;
+}
+
+h1 {
+  font: 200 29px/20px "nutanix_soft", san-serif;
 }
 
 .searchnav {
