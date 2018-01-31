@@ -15,7 +15,7 @@ let deckAvailable = cards.filter(card => card.state === 'available')
          card.entities + ` entities on ${card.clusterAffected} clusters`}
       </p>
       <h4>Updated ${card.updated}</h4>
-      <a href='#'> details </a>
+      <a href='#'> edit </a>
     </div>
   </div>`
 );
@@ -32,7 +32,7 @@ let deckUpdated = cards.filter(card => card.state !== 'available')
       <!--<p>${card.state}</p>-->
       <p>${card.entities} entities on ${card.clusterAffected} clusters </p>
       <h4>Updated ${card.updated}</h4>
-      <a href='#'>details </a>
+      <a href='#'> edit </a>
     </div>
   </div>`
 );
