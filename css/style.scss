@@ -241,7 +241,7 @@ h1{
 // main
 
 .container{
-  @include flex(flex-start, '', column);
+  @include flex(flex-start, flex-start, column);
   padding: 20px;
 }
 
