@@ -5,14 +5,16 @@ var cards = [
   category:'ahv',
   cluster: 'all',
   entities: 1,
-  state:'available'
+  state:'available',
+  clusterAffected:0,
   },
   {title:'Software component',
   updated: '2 days ago',
   category:'ahv',
   cluster: 'clustername',
   entities: 10,
-  state:'available'
+  state:'available',
+  clusterAffected:3,
   },
 
   {title:'Hypervisor',
@@ -20,7 +22,8 @@ var cards = [
   category:'ahv',
   cluster: 'clustername',
   entities: 30,
-  state:'available'
+  state:'available',
+  clusterAffected:3,
   },
 
   {title:'Acropolis OS',
@@ -28,7 +31,8 @@ var cards = [
   category:'ahv',
   cluster: 'clustername',
   entities: 10,
-  state:'In Progress'
+  state:'In Progress',
+  clusterAffected:2,
   },
 
   {title:'Host Boot Devices',
@@ -36,7 +40,8 @@ var cards = [
   category:'ahv',
   cluster: 'clustername',
   entities: 30,
-  state:'In Progress'
+  state:'In Progress',
+  clusterAffected:1,
   },
 
   {title:'NICs',
@@ -44,7 +49,8 @@ var cards = [
   category:'ahv',
   cluster: 'clustername',
   entities: 120,
-  state:'In Progress'
+  state:'In Progress',
+  clusterAffected:3,
   },
 
   {title:'HBA',
@@ -52,7 +58,8 @@ var cards = [
   category:'ahv',
   cluster: 'clustername',
   entities: 30,
-  state:'In Progress'
+  state:'In Progress',
+  clusterAffected:4,
   },
 
   {title:'BMC',
@@ -60,7 +67,8 @@ var cards = [
   category:'ahv',
   cluster: 'clustername',
   entities: 30,
-  state:'In Progress'
+  state:'In Progress',
+  clusterAffected:2,
   },
 
   {title:'SATA Drives',
@@ -68,7 +76,8 @@ var cards = [
   category:'ahv',
   cluster: 'clustername',
   entities: 60,
-  state:'In Progress'
+  state:'In Progress',
+  clusterAffected:2,
   },
 
   {title:'HDD Firmware',
@@ -76,7 +85,8 @@ var cards = [
   category:'ahv',
   cluster: 'clustername',
   entities: 60,
-  state:'In Progress'
+  state:'In Progress',
+  clusterAffected:2,
   },
 
   {title:'File Server',
@@ -84,7 +94,8 @@ var cards = [
   category:'ahv',
   cluster: 'clustername',
   entities: 60,
-  state:'In Progress'
+  state:'In Progress',
+  clusterAffected:1,
   },
 ];
 
