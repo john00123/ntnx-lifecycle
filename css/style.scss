@@ -33,6 +33,7 @@ header{
 aside{
   background-color: white;
   @include size(auto, 240px);
+  min-height: 100vh;
   display: flex;
   flex-shrink: 0;
   flex-flow: column;
