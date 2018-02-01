@@ -45,6 +45,7 @@ header svg {
 }
 
 aside {
+  position: fixed;
   background-color: white;
   height: auto;
   width: 240px;
@@ -469,6 +470,7 @@ h1 {
   justify-content: flex-start;
   flex-direction: column;
   padding: 20px;
+  margin-left: 240px;
 }
 
 .container > * {
@@ -709,6 +711,9 @@ h4 {
 @media (max-width: 560px) {
   aside {
     display: none;
+  }
+  .container {
+    margin-left: 0;
   }
   .status h6 {
     display: none;
