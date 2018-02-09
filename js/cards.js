@@ -12,7 +12,7 @@ var cards = [
   category:'ahv',
   cluster: 'all',
   entities: 1,
-  state:'available',
+  state:'In Progress',
   clusterAffected:0,
   },
   {title:'Software component',
@@ -20,7 +20,7 @@ var cards = [
   category:'ahv',
   cluster: 'clustername',
   entities: 10,
-  state:'available',
+  state:'In Progress',
   clusterAffected:3,
   },
 
@@ -29,7 +29,7 @@ var cards = [
   category:'ahv',
   cluster: 'clustername',
   entities: 30,
-  state:'available',
+  state:'In Progress',
   clusterAffected:3,
   },
 

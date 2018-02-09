@@ -1,8 +1,8 @@
 let deckAvailable = cards.filter(card => card.state === 'available')
 .map(card =>
   `<div class='card'>
-    <div class='card-header'>
-     <h5><input type='checkbox' class='select-tile'/> ${card.title} </h5>
+    <div class='card-header' style='background-color:#F55656; color:white;'>
+     <h5><input type='checkbox' class='select-tile'/> ${card.title} - Update Required </h5>
      <code> ${card.entities === 1 ?
         card.entities + ` ` :
         card.entities + ` `} </code>
@@ -28,7 +28,7 @@ let deckUpdated = cards.filter(card => card.state !== 'available')
      <h5> ${card.title} </h5>
     </div>
 
-    <div class='card-body'>
+    <div class='card-body' style='opacity:'>
       <!--<p>${card.state}</p>-->
       <p>${card.entities} entities on ${card.clusterAffected} clusters </p>
       <h4>Updated ${card.updated}</h4>
