@@ -15,7 +15,7 @@ let deckAvailable = cards.filter(card => card.state === 'available')
          card.entities + ` entities on ${card.clusterAffected} clusters`}
       </p>
       <h4>Updated ${card.updated}</h4>
-      <a href='#'> edit </a>
+      <a class='edit-popup' href='#'> edit </a>
     </div>
   </div>`
 );
@@ -32,7 +32,7 @@ let deckUpdated = cards.filter(card => card.state !== 'available')
       <!--<p>${card.state}</p>-->
       <p>${card.entities} entities on ${card.clusterAffected} clusters </p>
       <h4>Updated ${card.updated}</h4>
-      <a href='#'> edit </a>
+      <a class='edit-popup' href='#'> edit </a>
     </div>
   </div>`
 );
@@ -42,7 +42,7 @@ let deckUpdated = cards.filter(card => card.state !== 'available')
 
 let buttonGroup = buttons.map(button =>
   button.arrow == false ?
-  `<button class= ${button.class} ${button.secondClass}>
+  `<button class= "${button.class} ${button.secondClass}">
     ${button.title}
   </button>`
   :
@@ -74,13 +74,17 @@ function clearCheck(){
   $('.selected-text').html($('input:checked').length !== 0 ? `/ ` +  $('input:checked').length + ` modules selected ${`<a class='clear'>clear</a>`}`: '');
 }
 
-//filtering
-// function filtering(){
-//   let value = $('input').val();
-//   $('input').keydown(function(){
-//     $(`.section[data-type='available']`).html(deckUpdated);
-//   });
-// }
+function popupCreator(header, body, footer){
+
+  $('body').after(popBase);
+  $('.overlay').fadeIn();
+  $('.popup').append(header, body, footer);
+  $('.popup-header').click(()=>
+    $('.overlay').fadeOut("slow",
+      ()=> $('.overlay').remove()
+    )
+  );
+}
 
 
 //docready
@@ -90,7 +94,12 @@ $(document).ready(function() {
    $(`.section[data-type='available']`).append(deckAvailable);
    $(`.section[data-type='updated']`).append(deckUpdated);
    $('.card').click(checkCheck);
+   $('.options-popup').click(()=>{
+     popupCreator(header[0],body[0], footer[0]);
+   });
 
-   // filtering();
    initialCheck();
+   $('.edit-popup').click(()=>{
+     popupCreator(header[1],body[1], footer[0]);
+   });
 });

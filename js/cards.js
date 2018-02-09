@@ -1,5 +1,12 @@
 var cards = [
-
+  {title:'LCM',
+  updated: '2 days ago',
+  category:'lcm',
+  cluster: 'all',
+  entities: 1,
+  state:'available',
+  clusterAffected:0,
+  },
   {title:'Prism Central',
   updated: '2 days ago',
   category:'ahv',
@@ -110,7 +117,7 @@ var buttons = [
 
   {title: 'Schedule',
   class : 'secondary-alt',
-  secondClass : 'options-popup',
+  secondClass : 'schedule-popup',
   arrow: false
 },
 

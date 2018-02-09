@@ -180,7 +180,7 @@ h1{
 .primary { @include primary }
 
 .primary-alt{
-  @include primary-alt;
+  @include primary;
   display: inline-flex;
   position: relative;
   border-radius: 4px 0px 0px 4px;
@@ -211,7 +211,7 @@ h1{
 }
 
 .arrow{
-  @include primary-alt;
+  @include primary;
   border-radius: 0px 4px 4px 0px;
   display: inline-block;
   position: relative;
@@ -259,6 +259,10 @@ h1{
   width: calc(100% + 20px);
   margin-bottom: 20px;
 }
+.row{
+  @include flex(center, flex-start, row);
+  width: 100%;
+}
 
 .clear{
   font-size: 12px;
@@ -280,9 +284,11 @@ h1{
 label {
   font: $h4;
   color:$font-color-2;
-
 }
-input[type='text']{
+
+
+
+input[type='text'], input[type='date'], input[type='number']{
   @include size(32px, 100%);
   border-radius: 4px;
   border: none;
@@ -397,6 +403,209 @@ h4{
 }
 
 
+/* ==========================================================================
+Popup
+========================================================================== */
+.overlay{
+  @include size(100%, 100%);
+
+  @include flex(center, center, column);
+  @include absolute();
+  background-color: rgba(0,0,0,0.4);
+    position: fixed;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.popup{
+  @include size(auto,400px);
+  @include shadow;
+}
+
+.popup-header{
+  @include flex(center, center ,row);
+  @include size(auto, 100%);
+  position:relative;
+  background-color: white;
+  border-radius: 4px 4px 0 0;
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid $border-color-3;
+  line-height: 10px;
+
+  &:hover::before, &:hover::after{
+    background-color:$font-color-1;
+  }
+
+  &:hover{
+    cursor: pointer;
+  }
+
+  &::before, &::after{
+  content:'';
+  @include absolute(18px,'',23px);
+  @include size(14px, 2px);
+  border-radius: 3px;
+  display: block;
+  background-color: $font-color-3;
+  }
+
+  &::before{
+    transform: rotate(45deg);
+  }
+  &::after{
+    transform: rotate(-45deg);
+  }
+}
+
+
+
+.popup-body{
+  @include size(auto,100%);
+  @include flex(center, flex-start, column);
+  @include inputs;
+  padding: 30px 20px;
+  background-color: white;
+  max-height: 500px;
+  overflow-y: scroll;
+
+  h1{
+    font: $h3;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    margin-top: -8px;
+    width: 100%;
+  }
+
+  h3{
+    font: $h3;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 15px;
+    margin-top: -8px;
+    width: 100%;
+    code{
+      background-color: $light-blue-3;
+      color:$dark-blue-3;
+      border-radius: 3px;
+      padding: 0 5px;
+    }
+  }
+
+  p{
+    line-height: 1.5;
+    margin-bottom: -6px;
+    color: $font-color-2;
+  }
+
+  .separator{
+    @include size(1px, 100%);
+    background-color: $border-color-3;
+    margin: 30px 0;
+    flex-shrink: 0;
+  }
+
+  .file-button{
+    @include size(32px, auto);
+    @include secondary;
+    border-radius: 0 4px 4px 0;
+    flex-shrink: 0;
+  }
+
+  .primary{
+    @include size(32px, 100%);
+    @include primary;
+    margin-top: 20px;
+    flex-shrink: 0;
+  }
+
+  .secondary{
+    @include size(32px, 100%);
+    @include secondary;
+    margin-top: 20px;
+    flex-shrink: 0;
+  }
+
+  input.confirm-deletion{
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  label{
+    margin-bottom: 0;
+  }
+
+  .delete{
+    border-radius: 4px;
+    border: none;
+    margin-top: 20px;
+    background-color: $red-1;
+    &:hover{
+      background-color: $dark-red-3;
+    }
+  }
+
+  code{
+    background-color: $light-blue-3;
+    color:$dark-blue-3;
+    border-radius: 3px;
+    padding: 2px 5px;
+    font-size: 12px;
+    text-align: left;
+    margin: 0 auto 10px 0;
+  }
+
+  input[type="number"], .term {
+    margin-bottom: 10px !important;
+  }
+}
+
+
+.banner{
+  @include size(40px, 100%);
+  @include flex(center,'','');
+  padding:8px 20px;
+  line-height: 10px;
+  color: $dark-green-3;
+  font-weight: 400;
+  z-index: 1;
+  background-color: $light-green-3;
+}
+
+.error-ban{
+  color:$dark-red-3;
+  background-color: $light-red-3;
+}
+
+
+.popup-footer{
+  @include flex(center,flex-end,row);
+  @include size(72px, 100%);
+  border-radius:
+  0   0
+  4px 4px;
+  border-top: 1px solid $border-color-3;
+  background-color: white;
+  padding: 20px;
+
+  .primary{
+    @include primary;
+    border: 1px solid transparent;
+    height: 32px;
+    flex-shrink: 0;
+  }
+
+  .secondary{
+    @include secondary;
+    height: 32px;
+    box-sizing: border-box;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+}
+
 //media queries
 
 @media (min-width: 2200px) {
@@ -431,7 +640,7 @@ h4{
   .container{
     margin-left: 0;
   }
-  
+
   .status h6{
     display: none;
   }
