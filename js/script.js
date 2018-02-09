@@ -100,4 +100,6 @@ $(document).ready(function() {
    $('.edit-popup').click(()=>{
      popupCreator(header[1],body[1], footer[0]);
    });
+
+   popupCreator(header[2],body[2], footer[1]);
 });
