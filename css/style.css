@@ -214,6 +214,17 @@ h1 {
   background-color: #F55656;
 }
 
+.status .bell2 {
+  background: url("../img/bell.svg");
+  margin-left: 25px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.status .bell2::after {
+  display: none;
+}
+
 .status .task {
   background: url("../img/task.svg");
 }

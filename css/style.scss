@@ -162,6 +162,14 @@ h1{
     background: url('../img/bell.svg');
     &::after{background-color: $red-1;}
   }
+  .bell2{
+    background: url('../img/bell.svg');
+    &::after{display:none;}
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
   .task{
     background: url('../img/task.svg');
     &::after{background-color: $blue-1;}
@@ -175,6 +183,8 @@ h1{
     font-weight: 500;
   }
 }
+
+
 
 // buttons
 .primary { @include primary font-weight: 500; }
