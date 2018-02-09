@@ -177,7 +177,7 @@ h1{
 }
 
 // buttons
-.primary { @include primary }
+.primary { @include primary font-weight: 500; }
 
 .primary-alt{
   @include primary;
@@ -516,6 +516,7 @@ Popup
   .primary{
     @include size(32px, 100%);
     @include primary;
+    font-weight: 500;
     margin-top: 20px;
     flex-shrink: 0;
   }
@@ -593,6 +594,7 @@ Popup
     @include primary;
     border: 1px solid transparent;
     height: 32px;
+    font-weight: 500;
     flex-shrink: 0;
   }
 

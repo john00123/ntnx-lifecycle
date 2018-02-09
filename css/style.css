@@ -239,6 +239,7 @@ h1 {
   text-decoration: none;
   background-color: #22A5F7;
   outline: none;
+  font-weight: 500;
 }
 
 .primary:hover {
@@ -893,6 +894,7 @@ Popup
   text-decoration: none;
   background-color: #22A5F7;
   outline: none;
+  font-weight: 500;
   margin-top: 20px;
   flex-shrink: 0;
 }
@@ -1029,6 +1031,7 @@ Popup
   outline: none;
   border: 1px solid transparent;
   height: 32px;
+  font-weight: 500;
   flex-shrink: 0;
 }
 
