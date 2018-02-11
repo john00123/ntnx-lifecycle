@@ -78,6 +78,11 @@ aside p {
   position: relative;
 }
 
+.no-active {
+  margin: 10px -20px 0 -20px;
+  padding: 6px 20px;
+}
+
 .active {
   margin: 10px -20px 0 -20px;
   padding: 12px 20px;
