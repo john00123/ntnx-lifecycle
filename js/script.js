@@ -28,7 +28,7 @@ let deckUpdated = cards.filter(card => card.state !== 'available')
 
     <div class='card-body' style='opacity:'>
       <!--<p>${card.state}</p>-->
-      <p>${card.entities} entitiess </p>
+      <p>${card.entities} entities </p>
       <h4>Updated ${card.updated}</h4>
       <a class='edit-popup' href='#'> edit </a>
     </div>
