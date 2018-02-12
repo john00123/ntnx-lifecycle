@@ -13,9 +13,7 @@ const header = [
     Software Component
   </div>`
   ,
-  `<div class='popup-header'>
-    LCM Required Update
-  </div>`
+
 ]
 
 const body = [
@@ -77,15 +75,6 @@ const body = [
 
   </div>`
   ,
-
-  //1 edit menu
-  `
-  <div class='popup-body'>
-    <h3> LCM requires to be on the latest version in order to allow other modules to be updated. LCM module will auto update after version 1.2.3. </br>
-    <p>You can disable this action on under Options > Auto-Update</p></h3>
-  </div>
-  `
-  ,
 ]
 
 
@@ -93,12 +82,6 @@ const footer = [
   `<div class='popup-footer'>
     <button style='margin-right:10px' class='secondary cancel'>Cancel</button>
     <button class='primary'>Save</button>
-  </div>`
-  ,
-
-  `<div class='popup-footer'>
-    <button style='margin-right:10px' class='secondary cancel'>Cancel</button>
-    <button class='primary'>Update</button>
 
   </div>`
   ,
