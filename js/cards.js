@@ -1,4 +1,13 @@
 var cards = [
+  {title:'Object Store',
+  updated: '2 days ago',
+  category:'objectStore',
+  cluster: 'all',
+  entities: 1,
+  state:'available',
+  clusterAffected:0,
+  },
+
   {title:'LCM',
   updated: '2 days ago',
   category:'lcm',
