@@ -52,19 +52,24 @@ aside{
 
     margin-top: 0;
   }
-  p{
-    line-height: 10px;
+  p, a{
+    line-height: 20px;
     font-weight: 500;
     margin: 0;
     color: $font-color-1;
     margin-top: 10px;
     position: relative;
   }
+
+  a:hover{
+    color:$blue-1;
+    text-decoration: none;
+  }
 }
 
 .active{
   margin: 10px -20px 0 -20px;
-  padding: 12px 20px;
+  padding: 6px 20px;
   background-color: $semi-white-blue;
   &::after{
     content: '';
@@ -75,6 +80,33 @@ aside{
     right: 0;
   }
 }
+
+.section2{
+  margin-top: 30px;
+  margin-left: 30px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  border-left: 1px solid $border-color-3;
+  h3{
+    font:$h3;
+    font-weight: 500;
+  }
+
+  .step{
+    &:after{
+      content:'';
+      position:absolute;
+      @include size(16px, 16px);
+      background-color: red;
+      top:15px;
+      left: -4px;
+    }
+  }
+}
+
 
 .small-sep{
   width: 30px;

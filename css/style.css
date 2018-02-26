@@ -69,8 +69,8 @@ aside span {
   margin-top: 0;
 }
 
-aside p {
-  line-height: 10px;
+aside p, aside a {
+  line-height: 20px;
   font-weight: 500;
   margin: 0;
   color: #22272E;
@@ -78,9 +78,14 @@ aside p {
   position: relative;
 }
 
+aside a:hover {
+  color: #22A5F7;
+  text-decoration: none;
+}
+
 .active {
   margin: 10px -20px 0 -20px;
-  padding: 12px 20px;
+  padding: 6px 20px;
   background-color: #f4fbff;
 }
 
@@ -93,6 +98,33 @@ aside p {
   background-color: #22A5F7;
   top: 0;
   right: 0;
+}
+
+.section2 {
+  margin-top: 30px;
+  margin-left: 30px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  border-left: 1px solid #F2F4F6;
+}
+
+.section2 h3 {
+  font: 500 14px/10px "nutanix_soft", san-serif;
+  font-weight: 500;
+}
+
+.section2 .step:after {
+  content: '';
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  box-sizing: border-box;
+  background-color: red;
+  top: 15px;
+  left: -4px;
 }
 
 .small-sep {
