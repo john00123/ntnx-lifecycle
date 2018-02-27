@@ -100,6 +100,34 @@ aside a:hover {
   right: 0;
 }
 
+.log2 {
+  overflow: hidden;
+}
+
+.log2:after {
+  content: ' ';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  box-sizing: border-box;
+  width: 80%;
+  margin-left: 260px;
+  margin-bottom: 32px;
+  border-radius: 0 0 4px 4px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+
+.log {
+  width: calc(100% - 50px);
+  height: 80vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+  border-radius: 4px;
+}
+
 .section2 {
   margin-top: 30px;
   margin-left: 30px;
@@ -108,23 +136,48 @@ aside a:hover {
   flex-direction: column;
   position: relative;
   width: 100%;
-  border-left: 1px solid #F2F4F6;
+  border-left: 2px solid #F2F4F6;
 }
 
 .section2 h3 {
   font: 500 14px/10px "nutanix_soft", san-serif;
-  font-weight: 500;
+  font-weight: 600;
+}
+
+.section2 .step {
+  position: relative;
+  margin-top: -20px;
+  margin-bottom: 50px;
+}
+
+.section2 .step:first-of-type:after {
+  content: '';
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  box-sizing: border-box;
+  background-color: #36D068;
+  top: 12px;
+  left: -27px;
+  border-radius: 24pc;
+}
+
+.section2 .step span {
+  color: #627386;
+  line-height: 2.5;
+  font-size: 12px;
 }
 
 .section2 .step:after {
   content: '';
   position: absolute;
-  height: 16px;
-  width: 16px;
+  height: 8px;
+  width: 8px;
   box-sizing: border-box;
-  background-color: red;
-  top: 15px;
-  left: -4px;
+  background-color: #D5DAE0;
+  top: 14px;
+  left: -25px;
+  border-radius: 5pc;
 }
 
 .small-sep {
