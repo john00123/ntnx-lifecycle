@@ -25,6 +25,7 @@ header{
   padding: 20px;
   position: fixed;
   z-index: 20;
+  top:0;
   @include flex(center, space-between, row);
   svg{
     @include size(16px, 22px);
@@ -159,7 +160,6 @@ aside{
 }
 
 article{
-  margin-top: 60px;
   @include flex(stretch, flex-start, row);
   flex-grow: 1;
 }
@@ -728,4 +728,62 @@ Popup
   .container{
     width: 100%;
   }
+}
+
+
+body {
+  padding: 60px 0px;
+}
+
+
+.section-title {
+  color: #627386;
+}
+
+.inline:hover {
+  background-color: #f4fbff;
+  cursor: pointer;
+  position: relative;
+}
+
+.inline:hover::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 16px;
+  width: 16px;
+  box-sizing: border-box;
+  background-color: #d3edfd;
+  border-radius: 25pc;
+  background-image: url(../img/check.svg);
+  background-repeat: no-repeat;
+  background-position: 5px 5px;
+}
+
+.inline:active:after {
+  background-color: #22A5F7;
+}
+
+.selected {
+  position: relative;
+}
+
+.selected::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 16px;
+  width: 16px;
+  box-sizing: border-box;
+  background-color: #22A5F7;
+  border-radius: 25pc;
+  background-image: url(../img/check.svg);
+  background-repeat: no-repeat;
+  background-position: 5px 5px;
+}
+
+.selected:hover::after {
+  background-color: #22A5F7;
 }
