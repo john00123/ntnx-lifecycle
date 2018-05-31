@@ -80,9 +80,7 @@ function popupCreator(header, body, footer){
   $('.overlay').fadeIn();
   $('.popup').append(header, body, footer);
   $('.popup-header').click(()=>
-    $('.overlay').fadeOut("slow",
-      ()=> $('.overlay').remove()
-    )
+    $('.overlay').fadeOut("slow",() => $('.overlay').remove())
   );
 }
 
@@ -95,7 +93,7 @@ $(document).ready(function() {
    $(`.section[data-type='updated']`).append(deckUpdated);
    $('.card').click(checkCheck);
    $('.options-popup').click(()=> popupCreator(header[0],body[0], footer[0]));
-   $('.multi-primary').click(()=> popupCreator(header[0],body[0], footer[0]));
+   $('.multi-primary').click(()=> popupCreator(header[2],body[2], footer[0]));
    initialCheck();
    $('.edit-popup').click(()=>popupCreator(header[1],body[1], footer[0]));
 });
