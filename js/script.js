@@ -77,10 +77,13 @@ function clearCheck(){
 function popupCreator(header, body, footer){
 
   $('body').after(popBase);
+  $('html').css('overflow','hidden');
   $('.overlay').fadeIn();
   $('.popup').append(header, body, footer);
-  $('.popup-header').click(()=>
-    $('.overlay').fadeOut("slow",() => $('.overlay').remove())
+  $('.popup-header, .cancel').click(()=> {
+    $('.overlay').fadeOut("slow",() => $('.overlay').remove());
+    $('html').css('overflow','');
+    }
   );
 }
 
