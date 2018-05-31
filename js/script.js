@@ -94,12 +94,8 @@ $(document).ready(function() {
    $(`.section[data-type='available']`).append(deckAvailable);
    $(`.section[data-type='updated']`).append(deckUpdated);
    $('.card').click(checkCheck);
-   $('.options-popup').click(()=>{
-     popupCreator(header[0],body[0], footer[0]);
-   });
-
+   $('.options-popup').click(()=> popupCreator(header[0],body[0], footer[0]));
+   $('.multi-primary').click(()=> popupCreator(header[0],body[0], footer[0]));
    initialCheck();
-   $('.edit-popup').click(()=>{
-     popupCreator(header[1],body[1], footer[0]);
-   });
+   $('.edit-popup').click(()=>popupCreator(header[1],body[1], footer[0]));
 });
