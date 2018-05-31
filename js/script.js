@@ -87,7 +87,21 @@ function popupCreator(header, body, footer){
   );
 }
 
+function notificationTip(type, error){
+  $('header').append(`
+    <div class='notification'>
+        <h4>${type}</h4>
+        <div class='${error}'>${error}</div>
+        <hr>
+        <a> Authenticate </a>
+    <div>`
+  ).slideDown('slow', function() {
+    setTimeout(()=> $('.notification').fadeOut('slow'), 3000);
+  })
+}
 
+let errorTitle = `Password Required`;
+let errorContent = `please authenticate your vCenter`;
 //docready
 
 $(document).ready(function() {
@@ -96,6 +110,7 @@ $(document).ready(function() {
    $(`.section[data-type='updated']`).append(deckUpdated);
    $('.card').click(checkCheck);
    $('.options-popup').click(()=> popupCreator(header[0],body[0], footer[0]));
+   $('.schedule-popup').click(()=> notificationTip(errorTitle, errorContent));
    $('.multi-primary').click(()=> popupCreator(header[2],body[2], footer[0]));
    initialCheck();
    $('.edit-popup').click(()=>popupCreator(header[1],body[1], footer[0]));

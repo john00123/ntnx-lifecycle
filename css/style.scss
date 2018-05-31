@@ -380,6 +380,17 @@ h1{
   color:$red-1;
 }
 
+.notification{
+  @include size(auto, 280px);
+  padding: 20px;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: white;
+  border-radius:4px;
+  @include shadow();
+}
+
 [data-type='section-title']{
   font: $h4;
   color: $font-color-2;

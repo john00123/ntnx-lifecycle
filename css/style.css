@@ -616,6 +616,19 @@ h1 {
   color: #F55656;
 }
 
+.notification {
+  height: auto;
+  width: 280px;
+  box-sizing: border-box;
+  padding: 20px;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 9px 9px 0 rgba(0, 0, 0, 0.02), 0 3px 3px 0 rgba(0, 0, 0, 0.02), 0 1px 1px 0 rgba(0, 0, 0, 0.02);
+}
+
 [data-type='section-title'] {
   font: 400 12px/8px "nutanix_soft", san-serif;
   color: #627386;
