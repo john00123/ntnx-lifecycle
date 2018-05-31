@@ -82,32 +82,10 @@ const body = [
 
   //Authentication
   `<div class='popup-body'>
-    <details open style='width:100%;'>
+    <p style='margin-top:0;'> In order to update this component you will need to provide the information for your vCenter.</p>
+    <hr>
+    <details open style='width:100%; margin-bottom:0;'>
       <summary>vCenter Credentials 1</summary>
-      <hr>
-      <label for='location'>URL</label>
-      <input type='text'/>
-
-      <label for='location'>ADMIN</label>
-      <input type='text'/>
-      <label for='location'>PASSWORD</label>
-      <input style='margin-bottom:20px;' type='text'/>
-    </details>
-
-    <details style='width:100%;'>
-      <summary>vCenter Credentials 2</summary>
-      <hr>
-      <label for='location'>URL</label>
-      <input type='text'/>
-
-      <label for='location'>ADMIN</label>
-      <input type='text'/>
-      <label for='location'>PASSWORD</label>
-      <input style='margin-bottom:20px;' type='text'/>
-    </details>
-
-    <details style='width:100%;'>
-      <summary>vCenter Credentials 3</summary>
       <hr>
       <label for='location'>URL</label>
       <input type='text'/>

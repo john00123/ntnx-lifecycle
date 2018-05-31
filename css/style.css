@@ -612,6 +612,10 @@ h1 {
   line-height: 8px;
 }
 
+.red {
+  color: #F55656;
+}
+
 [data-type='section-title'] {
   font: 400 12px/8px "nutanix_soft", san-serif;
   color: #627386;
