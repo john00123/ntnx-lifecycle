@@ -1,5 +1,5 @@
 var cards = [
-  {title:'LCM',
+  {title:'ESXi Authentication',
   updated: '2 days ago',
   category:'lcm',
   cluster: 'all',

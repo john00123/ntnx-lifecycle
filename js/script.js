@@ -2,18 +2,15 @@ let deckAvailable = cards.filter(card => card.state === 'available')
 .map(card =>
   `<div class='card'>
     <div class='card-header'>
-     <h5><input type='checkbox' class='select-tile'/> ${card.title} </h5>
+     <h5> ${card.title} </h5>
      <code style='border-radius:3px; border:1px solid #F55656; color:#F55656; background-color:white; line-height:6pt;'>Required</code>
     </div>
 
     <div class='card-body'>
       <!-- <p>${card.state}</p> -->
-      <p>${ card.entities === 1 ?
-         card.entities + ` entity` :
-         card.entities + ` entities`}
-      </p>
-      <h4>Updated ${card.updated}</h4>
-      <a class='edit-popup' href='#'> edit </a>
+      <p style='line-height:1.5'> There are some credentials required to update your Hypervisor. </p>
+    <hr>
+      <button class='secondary' id='authenticate' style='justify-self:center'> Authenthicate</button>
     </div>
   </div>`
 );
@@ -76,11 +73,12 @@ function popupCreator(header, body, footer){
 
   $('body').after(popBase);
   $('.overlay').fadeIn();
+  $('html').css('overflow','hidden');
   $('.popup').append(header, body, footer);
-  $('.popup-header').click(()=>
-    $('.overlay').fadeOut("slow",
-      ()=> $('.overlay').remove()
-    )
+  $('.popup-header, .cancel').click(()=>{
+      $('.overlay').fadeOut("slow",()=> $('.overlay').remove())
+      $('html').css('overflow','');
+    }
   );
 }
 
@@ -94,6 +92,10 @@ $(document).ready(function() {
    $('.card').click(checkCheck);
    $('.options-popup').click(()=>{
      popupCreator(header[0],body[0], footer[0]);
+   });
+
+   $('#authenticate').click(()=>{
+     popupCreator(header[2],body[2], footer[0]);
    });
 
    initialCheck();

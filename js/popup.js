@@ -13,6 +13,10 @@ const header = [
     Software Component
   </div>`
   ,
+  `<div class='popup-header'>
+    Authentication required
+  </div>`
+
 
 ]
 
@@ -26,7 +30,7 @@ const body = [
     </div>
     <input type='text'/>
 
-  <div class='separator' style='margin-top:10px'/>
+    <div class='separator' style='margin-top:10px'/>
 
     <h3 style='font-weight:500'>Look for updates</h3>
     <div class='row'>
@@ -45,34 +49,73 @@ const body = [
     <div class='separator' style='margin-top:20px'/>
     <div class='row'>
       <input type='checkbox' checked='checked'/> Enable LCM Auto Update</div>
-  </div>`
+    </div>
+  `
   ,
   //1 edit menu
   `<div class='popup-body'>
-  <details style='width:100%; direction:ltr;'>
-    <summary>
-      <input type='checkbox'/>
-      Cluster 1
-    </summary>
-    Node 1
-  </details>
+    <details style='width:100%; direction:ltr;'>
+      <summary>
+        <input type='checkbox'/>
+        Cluster 1
+      </summary>
+      Node 1
+    </details>
 
-  <details style='width:100%'>
-    <summary>
-      <input type='checkbox'/>
-      Cluster 2
-    </summary>
-    Node 1
-  </details>
+    <details style='width:100%'>
+      <summary>
+        <input type='checkbox'/>
+        Cluster 2
+      </summary>
+      Node 1
+    </details>
 
-  <details style='width:100%'>
-    <summary>
-      <input type='checkbox'/>
-      Cluster 3
-    </summary>
-    Node 1
-  </details>
+    <details style='width:100%'>
+      <summary>
+        <input type='checkbox'/>
+        Cluster 3
+      </summary>
+      Node 1
+    </details>
+  </div>`
+  ,
 
+  `<div class='popup-body'>
+    <details open style='width:100%;'>
+      <summary>vCenter Credentials 1</summary>
+      <hr>
+      <label for='location'>URL</label>
+      <input type='text'/>
+
+      <label for='location'>ADMIN</label>
+      <input type='text'/>
+      <label for='location'>PASSWORD</label>
+      <input style='margin-bottom:20px;' type='text'/>
+    </details>
+
+    <details style='width:100%;'>
+      <summary>vCenter Credentials 2</summary>
+      <hr>
+      <label for='location'>URL</label>
+      <input type='text'/>
+
+      <label for='location'>ADMIN</label>
+      <input type='text'/>
+      <label for='location'>PASSWORD</label>
+      <input style='margin-bottom:20px;' type='text'/>
+    </details>
+
+    <details style='width:100%;'>
+      <summary>vCenter Credentials 3</summary>
+      <hr>
+      <label for='location'>URL</label>
+      <input type='text'/>
+
+      <label for='location'>ADMIN</label>
+      <input type='text'/>
+      <label for='location'>PASSWORD</label>
+      <input style='margin-bottom:20px;' type='text'/>
+    </details>
   </div>`
   ,
 ]

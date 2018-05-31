@@ -78,6 +78,40 @@ aside p {
   position: relative;
 }
 
+hr {
+  height: 1px;
+  border: none;
+  background-color: #F2F4F6;
+  margin-bottom: 20px;
+}
+
+summary {
+  outline: none;
+  color: #22A5F7;
+  font: 400 14px/10px "nutanix_soft", san-serif;
+  text-decoration: none;
+  color: #22272E;
+  width: 100%;
+}
+
+summary:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+details summary::-webkit-details-marker {
+  font-size: 80%;
+  color: #D5DAE0;
+}
+
+details {
+  background-color: #F2F4F6;
+  border-radius: 4px;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
 .no-active {
   margin: 10px -20px 0 -20px;
   padding: 6px 20px;
@@ -240,6 +274,7 @@ h1 {
   padding: 11px 15px;
   color: #FFFFFF;
   font: 400 14px/10px "nutanix_soft", san-serif;
+  font-weight: 500;
   border: none;
   text-decoration: none;
   background-color: #22A5F7;
@@ -270,6 +305,7 @@ h1 {
   padding: 11px 15px;
   color: #FFFFFF;
   font: 400 14px/10px "nutanix_soft", san-serif;
+  font-weight: 500;
   border: none;
   text-decoration: none;
   background-color: #22A5F7;
@@ -401,6 +437,7 @@ h1 {
   padding: 11px 15px;
   color: #FFFFFF;
   font: 400 14px/10px "nutanix_soft", san-serif;
+  font-weight: 500;
   border: none;
   text-decoration: none;
   background-color: #22A5F7;
@@ -894,6 +931,7 @@ Popup
   padding: 11px 15px;
   color: #FFFFFF;
   font: 400 14px/10px "nutanix_soft", san-serif;
+  font-weight: 500;
   border: none;
   text-decoration: none;
   background-color: #22A5F7;
@@ -1028,6 +1066,7 @@ Popup
   padding: 11px 15px;
   color: #FFFFFF;
   font: 400 14px/10px "nutanix_soft", san-serif;
+  font-weight: 500;
   border: none;
   text-decoration: none;
   background-color: #22A5F7;
