@@ -93,9 +93,10 @@ function notificationTip(type, error){
         <h4>${type}</h4>
         <div class='${error}'>${error}</div>
         <hr>
-        <a> Authenticate </a>
+        <a class='auth'> Authenticate </a>
     <div>`
   ).slideDown('slow', function() {
+    $('.auth').click(()=> popupCreator(header[2],body[2], footer[0]));
     setTimeout(()=> $('.notification').fadeOut('slow'), 3000);
   })
 }
