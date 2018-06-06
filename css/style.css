@@ -12,7 +12,7 @@ html {
   text-rendering: optimizeLegibility;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
-  background-color: -color-3;
+  background-color: #24252A;
 }
 
 body {
@@ -20,11 +20,12 @@ body {
   align-items: stretch;
   justify-content: flex-start;
   flex-direction: column;
-  background-color: #F2F4F6;
+  background-color: #24252A;
 }
 
 header {
-  background-color: #22272E;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: saturate(190%) blur(5px);
   height: 60px;
   width: 100%;
   box-sizing: border-box;
@@ -47,7 +48,7 @@ header svg {
 
 aside {
   position: fixed;
-  background-color: white;
+  background-color: #303239;
   height: auto;
   width: 240px;
   box-sizing: border-box;
@@ -62,6 +63,7 @@ aside h1 {
   margin-top: 40px;
   line-height: 0;
   text-align: left;
+  color: white;
 }
 
 aside span {
@@ -74,7 +76,7 @@ aside p, aside a {
   line-height: 20px;
   font-weight: 500;
   margin: 0;
-  color: #22272E;
+  color: white;
   margin-top: 10px;
   position: relative;
 }
@@ -121,7 +123,7 @@ details {
 .active {
   margin: 10px -20px 0 -20px;
   padding: 6px 20px;
-  background-color: #f4fbff;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .active::after {
@@ -217,7 +219,7 @@ details {
 
 .small-sep {
   width: 30px;
-  border-bottom: 1px solid #D5DAE0;
+  border-bottom: 1px solid #24252A;
   margin: 20px 0 0px 0;
 }
 
@@ -263,7 +265,7 @@ h1 {
   box-sizing: border-box;
   position: relative;
   outline: none;
-  background-color: #37414B;
+  background-color: #616068;
   padding: 8px 8px 8px 30px;
   border: none;
   border-radius: 4px;
@@ -663,6 +665,7 @@ input[type='text'], input[type='date'], input[type='number'] {
 
 input[type='text']:focus, input[type='date']:focus, input[type='number']:focus {
   border: 1px solid #22A5F7;
+  background-color: #616068;
 }
 
 input[type='checkbox'] {
@@ -693,6 +696,8 @@ input[type='checkbox'] {
   margin-bottom: 20px;
   position: relative;
   border-radius: 0 0 4px 4px;
+  color: white;
+  background-color: #303239;
 }
 
 .card-body:hover {
@@ -723,7 +728,7 @@ input[type='checkbox'] {
 }
 
 .card-body:hover {
-  color: #22272E;
+  color: white;
 }
 
 .card-body:not(:last-child) {
@@ -755,8 +760,9 @@ a:hover {
   flex-direction: row;
   border-radius: 4px 4px 0 0;
   padding: 15px 20px;
-  border-bottom: 1px solid #F2F4F6;
-  background-color: white;
+  border-bottom: 0px solid #1C1D1F;
+  background-color: rgba(255, 255, 255, 0.02);
+  color: white;
 }
 
 h5 {
@@ -1319,4 +1325,8 @@ body {
 
 .selected:hover::after {
   background-color: #22A5F7;
+}
+
+#filter {
+  background-color: #616068;
 }

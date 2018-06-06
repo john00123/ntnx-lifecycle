@@ -2,6 +2,35 @@
 @import '../../_ntnx/variables';
 @import '../../_ntnx/mixins';
 
+@mixin secondary-dark {
+	border: 1px solid $border-color-2;
+	border-radius: 4px;
+	padding: 11px 15px;
+	color: $font-color-1;
+	font: $a;
+	text-decoration: none;
+	background-color: $white;
+	margin:0;
+	outline: none;
+
+	&:hover {
+		color: $blue-1;
+		cursor: pointer;
+	}
+
+	&:active {
+		color: $blue-3;
+	}
+
+	span{
+		height: 10px;
+		display: block;
+		font-weight: 500;
+		line-height: 9pt;
+	}
+}
+
+
 //global layout and sizes
 
 html, body, article{
@@ -11,16 +40,17 @@ html, body, article{
 
 html{
   @include font;
-  background-color: -color-3;
+  background-color: #24252A;
 }
 
 body{
   @include flex(stretch, flex-start, column);
-  background-color: $background-color-3;
+  background-color: #24252A;
 }
 
 header{
-  background-color: $background-color-1;
+  background-color: rgba(0,0,0,0.4);
+  -webkit-backdrop-filter: saturate(190%) blur(5px);
   @include size(60px, 100%);
   padding: 20px;
   position: fixed;
@@ -35,7 +65,7 @@ header{
 
 aside{
   position: fixed;
-  background-color: white;
+  background-color: #303239;
   @include size(auto, 240px);
   min-height: 100vh;
   display: flex;
@@ -46,6 +76,7 @@ aside{
     margin-top: 40px;
     line-height: 0;
     text-align: left;
+    color:white;
   }
   span{
     font:$p-alt;
@@ -57,7 +88,7 @@ aside{
     line-height: 20px;
     font-weight: 500;
     margin: 0;
-    color: $font-color-1;
+    color: white;
     margin-top: 10px;
     position: relative;
   }
@@ -103,7 +134,8 @@ details{
 .active{
   margin: 10px -20px 0 -20px;
   padding: 6px 20px;
-  background-color: $semi-white-blue;
+  background-color: rgba(0,0,0,0.2);
+
   &::after{
     content: '';
     position: absolute;
@@ -187,7 +219,7 @@ details{
 
 .small-sep{
   width: 30px;
-  border-bottom: 1px solid $border-color-2;
+  border-bottom: 1px solid #24252A;
   margin: 20px 0 0px 0;
 }
 
@@ -221,7 +253,7 @@ h1{
   @include size( 32px, 250px);
   position: relative;
   outline: none;
-  background-color: $background-color-2;
+  background-color: #616068;
   padding:8px 8px 8px 30px;
   border: none;
   border-radius: 4px;
@@ -422,6 +454,7 @@ input[type='text'], input[type='date'], input[type='number']{
   font: $p;
   &:focus{
     border: 1px solid $blue-1;
+  background-color: #616068;
   }
 }
 
@@ -443,8 +476,9 @@ input[type='checkbox']{
   margin-bottom: 20px;
   position: relative;
   border-radius: 0 0 4px 4px;
+  color:white;
   &:hover{
-    color: $font-color-1;
+    color: white;
   }
 
   &:not(:last-child){
@@ -454,6 +488,7 @@ input[type='checkbox']{
   p:first-of-type{
     margin-top: 0;
   }
+  background-color: #303239;
 }
 
 a{@include link;}
@@ -463,8 +498,9 @@ a{@include link;}
   @include flex(center, space-between, row);
   border-radius: 4px 4px 0 0;
   padding: 15px 20px;
-  border-bottom: 1px solid $border-color-3;
-  background-color: white;
+  border-bottom: 0px solid #1C1D1F;
+  background-color: rgba(255,255,255,0.02);
+  color:white;
 }
 
 h5{
@@ -833,3 +869,6 @@ body {
 .selected:hover::after {
   background-color: #22A5F7;
 }
+
+#filter{
+  background-color: #616068;}
