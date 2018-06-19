@@ -69,13 +69,18 @@ aside span {
   margin-top: 0;
 }
 
-aside p {
-  line-height: 10px;
+aside p, aside a {
+  line-height: 20px;
   font-weight: 500;
   margin: 0;
   color: #22272E;
   margin-top: 10px;
   position: relative;
+}
+
+aside a:hover {
+  color: #22A5F7;
+  text-decoration: none;
 }
 
 hr {

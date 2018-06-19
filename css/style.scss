@@ -52,13 +52,18 @@ aside{
 
     margin-top: 0;
   }
-  p{
-    line-height: 10px;
+  p, a{
+    line-height: 20px;
     font-weight: 500;
     margin: 0;
     color: $font-color-1;
     margin-top: 10px;
     position: relative;
+  }
+
+  a:hover{
+    color:$blue-1;
+    text-decoration: none;
   }
 }
 
