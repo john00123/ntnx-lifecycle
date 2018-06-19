@@ -457,6 +457,24 @@ input[type='checkbox']{
 }
 
 a{@include link;}
+.link{
+  margin-top: 12px;
+  &:hover{
+    cursor: pointer;
+    color:$blue-1;
+  }
+  &:after{
+    content:'';
+    color: $blue-1;
+    display: inline-block;
+    margin-left: 10px;
+    @include size(6px, 6px);
+    background-color:$green-1;
+    border-radius: 4pc;
+    transform: rotate(180deg);
+  }
+}
+
 
 .card-header{
   @include size(40px,100%);
