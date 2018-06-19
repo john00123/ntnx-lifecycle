@@ -80,6 +80,7 @@ const body = [
   </div>`
   ,
 
+  //2 Vcenter Auth
   `<div class='popup-body'>
     <details open style='width:100%;'>
       <summary>vCenter Credentials 1</summary>
@@ -105,17 +106,7 @@ const body = [
       <input style='margin-bottom:20px;' type='text'/>
     </details>
 
-    <details style='width:100%;'>
-      <summary>vCenter Credentials 3</summary>
-      <hr>
-      <label for='location'>URL</label>
-      <input type='text'/>
-
-      <label for='location'>ADMIN</label>
-      <input type='text'/>
-      <label for='location'>PASSWORD</label>
-      <input style='margin-bottom:20px;' type='text'/>
-    </details>
+    <button class='secondary'> Add VCenter </button>
   </div>`
   ,
 ]
