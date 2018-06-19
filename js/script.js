@@ -9,7 +9,6 @@ let deckAvailable = cards.filter(card => card.state === 'available')
     <div class='card-body'>
       <!-- <p>${card.state}</p> -->
       <p style='line-height:1.5'> There are some credentials required to update your Hypervisor. </p>
-    <hr>
       <button class='secondary' id='authenticate' style='justify-self:center'> Authenthicate</button>
     </div>
   </div>`
