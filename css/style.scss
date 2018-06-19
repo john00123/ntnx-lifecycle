@@ -97,7 +97,9 @@ details{
   padding: 15px;
   box-sizing: border-box;
   margin-bottom:20px;
+
 }
+
 
 .no-active{
   margin: 10px -20px 0 -20px;
@@ -328,6 +330,7 @@ label {
   color:$font-color-2;
 }
 
+.error-input{border: 1px solid $red-1;}
 
 
 input[type='text'], input[type='date'], input[type='number']{
@@ -374,6 +377,10 @@ input[type='checkbox']{
   p:first-of-type{
     margin-top: 0;
   }
+}
+
+.red{
+  color:$red-1;
 }
 
 a{@include link;}
@@ -447,6 +454,7 @@ h4{
 
 .link{
   margin-top: 12px;
+  color:$red-1;
   &:hover{
     cursor: pointer;
     color:$blue-1;

@@ -555,6 +555,10 @@ label {
   color: #627386;
 }
 
+.error-input {
+  border: 1px solid #F55656;
+}
+
 input[type='text'], input[type='date'], input[type='number'] {
   height: 32px;
   width: 100%;
@@ -640,6 +644,10 @@ input[type='checkbox'] {
 
 .card-body p:first-of-type {
   margin-top: 0;
+}
+
+.red {
+  color: #F55656;
 }
 
 a {
@@ -731,6 +739,7 @@ h4 {
 
 .link {
   margin-top: 12px;
+  color: #F55656;
 }
 
 .link:hover {
