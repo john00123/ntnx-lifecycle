@@ -729,6 +729,28 @@ h4 {
   border-bottom: 1px solid #F2F4F6;
 }
 
+.link {
+  margin-top: 12px;
+}
+
+.link:hover {
+  cursor: pointer;
+  color: #22A5F7;
+}
+
+.link:after {
+  content: '';
+  color: #22A5F7;
+  display: inline-block;
+  margin-left: 10px;
+  height: 6px;
+  width: 6px;
+  box-sizing: border-box;
+  background-color: #F55656;
+  border-radius: 4pc;
+  transform: rotate(180deg);
+}
+
 /* ==========================================================================
 Popup
 ========================================================================== */
