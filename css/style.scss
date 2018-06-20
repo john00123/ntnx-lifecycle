@@ -5,8 +5,7 @@
 //global layout and sizes
 
 html, body, article{
-  @include flex(stretch, strecth, column);
-  margin:0;
+  @include base;
 }
 
 html{
@@ -137,52 +136,8 @@ details{
   position: relative;
   border-radius:4px;
 }
-.section2{
-  margin-top: 30px;
-  margin-left: 30px;
-  padding-left: 20px;
 
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  border-left: 2px solid $border-color-3;
-  h3{
-    font:$h3;
-    font-weight: 600;
-  }
 
-  .step{
-    position: relative;
-    margin-top: -20px;
-    margin-bottom: 50px;
-    &:first-of-type{
-      &:after{
-        content:'';
-        position:absolute;
-        @include size(12px, 12px);
-        background-color: $green-1;
-        top:12px;
-        left: -27px;
-        border-radius: 24pc;
-      }
-    }
-    span{
-      color:$font-color-2;
-      line-height: 2.5;
-      font-size: 12px;
-    }
-    &:after{
-      content:'';
-      position:absolute;
-      @include size(8px, 8px);
-      background-color: $border-color-2;
-      top:14px;
-      left: -25px;
-      border-radius: 5pc;
-    }
-  }
-}
 
 
 .small-sep{
@@ -196,9 +151,6 @@ article{
   flex-grow: 1;
 }
 
-h1{
-  font:$h1;
-}
 
 .searchnav{
   @include flex(center, center, row);
@@ -352,25 +304,16 @@ h1{
 // main
 
 .container{
-  @include flex(flex-start, flex-start, column);
+  @include flex(stretch, stretch, column);
   padding: 20px;
   margin-left: 240px;
-}
-
-.container > * {
-  margin-bottom: 20px;
+  width:100%;
 }
 
 .section{
-  @include flex(flex-start, flex-start, row);
-  flex-wrap: wrap;
-  width: calc(100% + 20px);
-  margin-bottom: 20px;
+  @include grid();
 }
-.row{
-  @include flex(center, flex-start, row);
-  width: 100%;
-}
+
 
 .clear{
   font-size: 12px;
@@ -429,12 +372,6 @@ input[type='checkbox']{
   display: inline-flex;
   margin-right: 10px;
   pointer-events: none;
-}
-
-.card{
-  width: calc(25% - 20px);
-  margin-right: 20px;
-  min-width: 280px;
 }
 
 .card-body{
@@ -604,7 +541,6 @@ Popup
 .popup-body{
   @include size(auto,100%);
   @include flex(center, flex-start, column);
-  @include inputs;
   padding: 30px 20px;
   background-color: white;
   max-height: 500px;
@@ -748,38 +684,11 @@ Popup
 
 //media queries
 
-@media (min-width: 2200px) {
-  .card{
-    width: calc(20% - 20px);
-  }
-}
-
-@media (max-width: 1510px) {
-  .card{
-    width: calc(33% - 17px);
-  }
-}
-
-@media (max-width: 1210px) {
-  .card{
-    width: calc(50% - 20px);
-  }
-}
-
-@media (max-width: 902px) {
-  .card{
-    width: 100%;
-  }
-}
 
 @media (max-width: 560px) {
   aside{
     display: none;
-  }
-
-  .container{
-    margin-left: 0;
-  }
+}
 
   .status h6{
     display: none;
@@ -789,9 +698,6 @@ Popup
     margin-right: 20px;
   }
 
-  .container{
-    width: 100%;
-  }
 }
 
 
