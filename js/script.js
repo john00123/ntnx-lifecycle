@@ -2,15 +2,15 @@ let deckAvailable = cards.filter(card => card.state === 'available')
 .map(card =>
   `<div class='card'>
     <div class='card-header'>
-     <h5><input type='checkbox' class='select-tile'/> ${card.title} </h5>
-     <code> ${card.entities === 1 ?
+     <h5 contenteditable="true" ><input type='checkbox' class='select-tile'/> ${card.title} </h5>
+     <code contenteditable="true"> ${card.entities === 1 ?
         card.entities + ` ` :
         card.entities + ` `} </code>
     </div>
 
     <div class='card-body'>
       <!-- <p>${card.state}</p> -->
-      <p>${ card.entities === 1 ?
+      <p contenteditable="true">${ card.entities === 1 ?
          card.entities + ` entity` :
          card.entities + ` entities on ${card.clusterAffected} clusters`}
       </p>
@@ -25,12 +25,12 @@ let deckUpdated = cards.filter(card => card.state !== 'available')
 .map(card =>
   `<div class='card'>
     <div class='card-header'>
-     <h5> ${card.title} </h5>
+     <h5 contenteditable="true" > ${card.title} </h5>
     </div>
 
     <div class='card-body'>
       <!--<p>${card.state}</p>-->
-      <p>${card.entities} entities on ${card.clusterAffected} clusters </p>
+      <p contenteditable="true" >${card.entities} entities on ${card.clusterAffected} clusters </p>
       <h4>Updated ${card.updated}</h4>
       <a class='edit-popup' href='#'> edit </a>
     </div>

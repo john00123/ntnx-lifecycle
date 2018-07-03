@@ -1,5 +1,5 @@
 var cards = [
-  {title:'Object Store',
+    {title:'Object Store',
   updated: '2 days ago',
   category:'objectStore',
   cluster: 'all',
@@ -21,7 +21,7 @@ var cards = [
   category:'ahv',
   cluster: 'all',
   entities: 1,
-  state:'available',
+  state:'In Progress',
   clusterAffected:0,
   },
   {title:'Prism Central',
@@ -29,7 +29,7 @@ var cards = [
   category:'ahv',
   cluster: 'all',
   entities: 1,
-  state:'in progress',
+  state:'available',
   clusterAffected:10,
   },
   {title:'Software component',
@@ -37,7 +37,7 @@ var cards = [
   category:'ahv',
   cluster: 'clustername',
   entities: 10,
-  state:'available',
+  state:'In Progress',
   clusterAffected:3,
   },
 
@@ -46,7 +46,7 @@ var cards = [
   category:'ahv',
   cluster: 'clustername',
   entities: 30,
-  state:'available',
+  state:'In Progress',
   clusterAffected:3,
   },
 
