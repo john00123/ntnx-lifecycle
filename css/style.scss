@@ -151,9 +151,12 @@ details{
 
 .available{
   .card-header, .card-body{
-    background-color: rgba(255,255,255,0.6);
+    background-color: $background-color-3;
+    border: 1px dashed rgba(0,0,0,0.2);
   }
-
+  .card-header{
+    border-bottom: none;
+  }
 }
 
 article{
