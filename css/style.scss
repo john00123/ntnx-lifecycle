@@ -100,6 +100,29 @@ details{
 
 }
 
+.left{
+  @include flex(center, flex-start, row);
+
+  h3{
+    color:white;
+    font-size: 14px;
+    font-weight: 500;
+
+    padding: 4px 20px;
+    border-right: 1px solid $background-color-2;
+  }
+
+  h4{
+    color:white;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 20px;
+    color:$font-color-4;
+    margin: 0;
+    border-right: 1px solid $background-color-2;
+  }
+
+}
 
 .no-active{
   margin: 10px -20px 0 -20px;
@@ -178,39 +201,38 @@ h1{
   }
 }
 
+.icon{
+  @include size(14px, 14px);
+  margin-right: 50px;
+  position: relative;
+
+  &::after{
+    content: '3';
+    position: absolute;
+    padding: 5px 6px;
+    left:25px;
+    top:-2px;
+    font-size: 12px;
+    line-height: 7pt;
+    display: block;
+    font-weight: 600;
+    color:white;
+    border-radius: 4pc;
+  }
+}
+
+.bell{
+  margin-left:20px;
+  background: url('../img/bell.svg');
+  &::after{background-color: $red-1;}
+}
+.task{
+  background: url('../img/task.svg');
+  &::after{background-color: $blue-1;}
+}
+
 .status{
   @include flex(center, flex-end, row);
-
-  .icon{
-    @include size(14px, 14px);
-    margin-right: 50px;
-    position: relative;
-
-    &::after{
-      content: '3';
-      position: absolute;
-      padding: 5px 6px;
-      background-color:red;
-      left:25px;
-      top:-2px;
-      font-size: 12px;
-      line-height: 7pt;
-      display: block;
-      font-weight: 600;
-      color:white;
-      border-radius: 4pc;
-    }
-  }
-
-  .bell{
-    background: url('../img/bell.svg');
-    &::after{background-color: $red-1;}
-  }
-  .task{
-    background: url('../img/task.svg');
-    &::after{background-color: $blue-1;}
-  }
-
 
   h6{
     margin-left: 10px;
@@ -533,7 +555,7 @@ Popup
 .popup-body{
   @include size(auto,100%);
   @include flex(center, flex-start, column);
-  @include inputs;
+  // @include inputs;
   padding: 30px 20px;
   background-color: white;
   max-height: 500px;
