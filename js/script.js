@@ -1,15 +1,15 @@
 let deckAvailable = cards.filter(card => card.state === 'available')
 .map(card =>
-  `<div class='card'>
+  `<div class='card available'>
     <div class='card-header'>
      <h5> ${card.title} </h5>
-     <code style='border-radius:3px; border:1px solid #F55656; color:#F55656; background-color:white; line-height:6pt;'>Required</code>
+     <code style='border-radius:3px; border:1px solid #F55656; color:#F55656; background-color:transparent; line-height:6pt;'>Image missing</code>
     </div>
 
     <div class='card-body'>
       <!-- <p>${card.state}</p> -->
       <p style='line-height:1.5'> There are some credentials required to update your Hypervisor. </p>
-      <button class='secondary' id='authenticate' style='justify-self:center'> Authenthicate</button>
+      <button class='secondary' id='authenticate' style='justify-self:center'> Upload Image</button>
     </div>
   </div>`
 );
